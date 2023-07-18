@@ -1,0 +1,451 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos do corpo da página */
+body {
+  width: 100vw;
+  background-color: rgb(12, 12, 10);
+}
+
+/* Estilos do menu de navegação */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  box-shadow: 0 0 10px #000;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 18px;
+  font-family: 'Dancing Script', cursive;
+}
+
+nav p {
+  background-color: rgba(196, 158, 92, 0.589);
+  display: flex;
+  align-items: center;
+  width: 290px;
+  height: 75px;
+  font-size: 38px;
+  padding-left: 55px;
+  padding-bottom: 17px;
+  margin-left: 35px;
+  border-radius: 5px;
+  font-family: 'Dancing Script', cursive;
+  border-radius: 0px 40px 0px 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin-top: 30px;
+}
+
+nav li {
+  margin: 0 15px;
+  padding-right: 25px;
+}
+
+nav a {
+  padding-left: 35px;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(196, 157, 92);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: left;
+}
+
+.animated-title p {
+  display: flex;
+  font-size: 24px;
+  font-weight: 300;
+  background-color: #00000079;
+  border-radius: 5px;
+  width: 500px;
+  height: 150px;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+
+nav a:hover {
+  color: rgb(238, 236, 233);
+}
+
+nav a:hover::before {
+  transform: scaleX(1);
+}
+
+/* Estilos do cabeçalho */
+header {
+  background: url(/image/jonas-jacobsson-1iTKoFJvJ6E-unsplash.jpg);
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.header-content {
+  max-width: 1000px;
+  margin: 50px auto;
+  text-align: center;
+  padding-top: 65px;
+}
+
+@keyframes slide-in {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes scale-up {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.animated-title {
+  animation: slide-in 1s forwards;
+  animation-delay: 0.9s;
+}
+
+.animated-word {
+  animation: scale-up 5s infinite;
+  color: rgb(82, 57, 15);
+}
+
+.animated-title span:first-child {
+  font-family: 'Dancing Script', cursive;
+  font-size: 104px;
+  color: rgb(90, 63, 17);
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgb(196, 157, 92);
+}
+
+/* Estilos da seção de descrição */
+.container {
+  display: flex;
+  max-height: 100vh;
+  width: 100vw;
+}
+
+.left-content {
+  flex: 1;
+  margin-left: 45px;
+}
+
+.text-container {
+  position: relative;
+  width: 700px;
+  height: 300px;
+  margin-top: 110px;
+  overflow: hidden;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text-container p {
+  font-size: 26px;
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-container p.active {
+  opacity: 1;
+}
+
+.right-content {
+  flex: 1;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  width: 600px;
+  padding-top: 70px;
+  padding-left: 50px;
+  padding-right: 100px;
+  padding-bottom: 70px;
+}
+
+.gallery img {
+  width: 220px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 0px 7px 0px 7px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.content-button {
+  font-family: 'Dancing Script', cursive;
+  padding: 10px 20px;
+  width: 380px;
+  height: 80px;
+  background-color:  rgb(196, 157, 92);
+  color: rgb(90, 63, 17);
+  border: none;
+  border-radius: 0px 7px 0px 7px;
+  font-size: 26px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* Estilos da seção Cardápio */
+section .content-cardapio {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(2fr, 1fr);
+  gap: 5px;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(196, 157, 92);
+  margin-top: 45px;
+}
+
+.gallery-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: 2;
+  width: 600px;
+  height: 430px;
+  margin: auto;
+  background-color: rgba(90, 63, 17, 0.055);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.514);
+  border-radius: 5px;
+}
+
+.card {
+  margin: auto;
+  width: 150px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 110px;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  border-radius: 0px 40px 0px 40px;
+  box-shadow: 2px 2px 5px black;
+}
+
+.card p {
+  font-size: 20px;
+  font-weight: 500;
+  color:  rgb(252, 251, 251);
+}
+
+.content-descricao {
+  display: block;
+  text-align: center;
+  margin: auto;
+  grid-column: 1;
+  width: 400px;
+  height: 550px;
+}
+
+.content-descricao img {
+  width: 430px;
+  height: 530px;
+  margin-left: 25px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.671);
+  cursor: pointer;
+}
+
+/* Estilos do Contato */
+
+.container-contato {
+  padding: 0 10rem 0 10rem;
+}
+
+.container-contato h1 {
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+  margin-top: 3rem;
+}
+
+.container-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 55px;
+}
+
+.container-contato .container-form .map {
+  width: 40%;
+  height: 345px;
+  object-fit: cover;
+} 
+
+.container-contato h1 {
+  font-size: 38px;
+  padding-bottom: 10px;
+  font-weight: 300;
+}
+
+form {
+  background-color: rgb(90, 63, 17);
+  padding: 2rem;
+  width: 400px;
+  height: auto;
+}
+
+
+form h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.inputform input {
+  width: 100%;
+  padding: 14px 30px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.inputform {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 1rem;
+  margin-top: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.inputform span {
+  padding-top: 6px;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+}
+
+form button {
+  margin-top: 2rem;
+  background-color: rgb(196, 157, 92);
+  padding: 10px 15px;
+  text-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+form button:hover {
+  letter-spacing: 2px;
+  transition: 0.3s all;
+}
+
+/* Estilos do rodapé */
+footer {
+  background-color: #111111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+}
+
+.social-media {
+  margin-bottom: 10px;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  margin-top: 15px;
+  object-fit: contain;
+}
+
+p {
+  color: rgb(250, 250, 250);
+  padding-top: 10px;
+  margin: 0;
+}
